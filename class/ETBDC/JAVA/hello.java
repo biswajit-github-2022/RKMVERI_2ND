@@ -7,6 +7,6 @@ class hi {
         System.out.println(number);
     }
 }
-// java -d ../class_file hi.java
+// javac -d ../class_file hi.java
 //java -cp ../class_file hi 
 // jar cf MyApplication.jar -C classes/ .
