@@ -1,0 +1,10 @@
+apacha Pulser 
+RAY
+Apacha Flink
+Apacha Kafka
+H2O (sparkling water) h20+spark 
+spark Delta Lake
+Storm +haron
+storm+h20
+pythorch distributed
+tenserflow distributed
