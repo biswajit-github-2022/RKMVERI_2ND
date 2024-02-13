@@ -11,3 +11,12 @@ class hi {
 // javac -d ../class_file hi.java
 // java -cp ../class_file hi 
 // jar cf MyApplication.jar -C classes/ .
+
+
+/* Hadoop Pipeline
+
+            setup
+Recordreader->map->partitionar->suffeler->reducer
+            cleanup
+
+*/
