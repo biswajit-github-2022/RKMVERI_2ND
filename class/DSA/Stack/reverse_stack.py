@@ -22,4 +22,9 @@ def reverse_stack(stack1,stack2,stack3):
         
     return stack1
 
-print(reverse_stack(stack1,stack2,stack3))
+reversed_stack=reverse_stack(stack1,stack2,stack3)
+
+print("Reversed Stack: ")
+while reversed_stack.__len__()!=0:
+    print(reversed_stack.top())
+    reversed_stack.pop()
