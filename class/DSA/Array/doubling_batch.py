@@ -1,6 +1,6 @@
 import sys # provides getsizeof function
 data = [ ]
-for k in range(500): # NOTE: must fix choice of n
+for k in range(1000,2000): # NOTE: must fix choice of n
     a = len(data) # number of elements
     b = sys.getsizeof(data) # actual size in bytes
     print( "Length: {0:3d}; Size in bytes: {1:4d} increment of {2:4d}" .format(a, b, b-56))
@@ -277,6 +277,8 @@ print(data)
 # Length: 988; Size in bytes: 8632 increment of 8576
 # Length: 992; Size in bytes: 8632 increment of 8576
 # Length: 996; Size in bytes: 8632 increment of 8576
+
+# 20
 # Length: 1000; Size in bytes: 8632 increment of 8576
 # Length: 1004; Size in bytes: 8632 increment of 8576
 # Length: 1008; Size in bytes: 8632 increment of 8576
@@ -296,6 +298,8 @@ print(data)
 # Length: 1064; Size in bytes: 8632 increment of 8576
 # Length: 1068; Size in bytes: 8632 increment of 8576
 # Length: 1072; Size in bytes: 8632 increment of 8576
+
+# 36
 # Length: 1076; Size in bytes: 9784 increment of 9728
 # Length: 1080; Size in bytes: 9784 increment of 9728
 # Length: 1084; Size in bytes: 9784 increment of 9728
@@ -332,6 +336,8 @@ print(data)
 # Length: 1208; Size in bytes: 9784 increment of 9728
 # Length: 1212; Size in bytes: 9784 increment of 9728
 # Length: 1216; Size in bytes: 9784 increment of 9728
+
+# 40
 # Length: 1220; Size in bytes: 11064 increment of 11008
 # Length: 1224; Size in bytes: 11064 increment of 11008
 # Length: 1228; Size in bytes: 11064 increment of 11008
@@ -372,6 +378,8 @@ print(data)
 # Length: 1368; Size in bytes: 11064 increment of 11008
 # Length: 1372; Size in bytes: 11064 increment of 11008
 # Length: 1376; Size in bytes: 11064 increment of 11008
+
+# 44
 # Length: 1380; Size in bytes: 12504 increment of 12448
 # Length: 1384; Size in bytes: 12504 increment of 12448
 # Length: 1388; Size in bytes: 12504 increment of 12448
@@ -417,6 +425,9 @@ print(data)
 # Length: 1548; Size in bytes: 12504 increment of 12448
 # Length: 1552; Size in bytes: 12504 increment of 12448
 # Length: 1556; Size in bytes: 12504 increment of 12448
+
+
+# 50
 # Length: 1560; Size in bytes: 14136 increment of 14080
 # Length: 1564; Size in bytes: 14136 increment of 14080
 # Length: 1568; Size in bytes: 14136 increment of 14080
@@ -468,6 +479,9 @@ print(data)
 # Length: 1752; Size in bytes: 14136 increment of 14080
 # Length: 1756; Size in bytes: 14136 increment of 14080
 # Length: 1760; Size in bytes: 14136 increment of 14080
+
+
+# 56
 # Length: 1764; Size in bytes: 15960 increment of 15904
 # Length: 1768; Size in bytes: 15960 increment of 15904
 # Length: 1772; Size in bytes: 15960 increment of 15904
@@ -525,5 +539,6 @@ print(data)
 # Length: 1980; Size in bytes: 15960 increment of 15904
 # Length: 1984; Size in bytes: 15960 increment of 15904
 # Length: 1988; Size in bytes: 15960 increment of 15904
+
 # Length: 1992; Size in bytes: 18008 increment of 17952
 # Length: 1996; Size in bytes: 18008 increment of 17952

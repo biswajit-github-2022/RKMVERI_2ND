@@ -1,5 +1,5 @@
 def decode_ceaser_cypher(str):
-    lag=15
+    lag=10
     newstr=""
     for i in str:
         if i ==" ":newstr+=" ";continue
@@ -13,8 +13,8 @@ def decode_ceaser_cypher(str):
 
     
 s="a"
-d=int(s,17)
-print(d)
+# d=int(s,17)
+# print(d)
 print(decode_ceaser_cypher("SP TD LY LESPTDE HSZ OZPD YZE MPWTPGP TY STXDPWQ"))
 
 # 1) EXOA TLOH EXP KL PRYPQFQRQB
