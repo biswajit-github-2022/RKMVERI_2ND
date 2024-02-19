@@ -25,5 +25,5 @@ def evaluate_postfix(exprsn):
     if stack.__len__()!=1: raise Exception("Invalid expression")
     return stack.pop()
 
-exprsn = input("Enter the postfix expression : ")
-print(evaluate_postfix(exprsn))
+# exprsn = input("Enter the postfix expression : ")
+# print(evaluate_postfix(exprsn))

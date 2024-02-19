@@ -1,50 +1,35 @@
 from Stack_using_array import ArrayStack 
+from postfix import evaluate_postfix
 
-def evaluate(op1,oprator,op2):
-    op1=float(op1)
-    op2=float(op2)
-    if oprator=="+":
-        return(op1+op2)
-    elif oprator=="-":
-        return(op1-op2)
-    elif oprator=="*":
-        return(op1*op2)
-    elif oprator=="/":
-        return(op1/op2)
-    elif oprator=="^":
-        return(op1**op2)
-    elif oprator=="%":
-        return(op1%op2)
 
 def evaluate_prefix(exprsn):
-    stack=ArrayStack()
-    for char in exprsn:
-        if char.isdigit():
-            if type(stack.top()) == int or float:
-                op1=stack.pop()
-                if type(stack.top()) == int or float:
-                    op2=stack.pop()
-                    oprator=stack.pop()
-                    op1=evaluate(op2,oprator,op1)
-                op2=int(char)
-                oprator=stack.pop()
-                stack.push(evaluate(op1,oprator,op2))
-            else:
-                stack.push(int(char))
-        else:
-            if char.isdigit():
-                stack.push(int(char))
-                continue
-            stack.push(char)
-    if stack.__len__()>1:
-        for i in range(stack.__len__()-1):
-            op2=stack.pop()
-            op1=stack.pop()
-            oprator=stack.pop()
-            stack.push(evaluate(op1,oprator,op2))
-            if stack.__len__()==1:
-                return stack.pop()
-    return stack.pop()
+    reverse_expression= exprsn[::-1]
+    value=evaluate_postfix(reverse_expression)
+    return value
 
-exprsn = input("Enter the prefix expression : ")
-print(evaluate_prefix(exprsn))
+f=1
+while f:
+    exprsn = input("Enter the prefix expression : ")
+    print(evaluate_prefix(exprsn))
+    f= int(input("f: "))
+
+
+
+
+#   +1%/*/*23+4567^89
+    
+# Enter the prefix expression : /*23+45
+# 1.5
+# f: 1       
+# Enter the prefix expression : */*23+456
+# 9.0
+# f: 1
+# Enter the prefix expression : /*/*23+4567
+# 0.7777777777777778
+# f: 1
+# Enter the prefix expression : %/*/*23+4567^89
+# 0.11111111042837596
+# f: 1
+# Enter the prefix expression : +1%/*/*23+4567^89
+# 1.111111110428376
+# f: 0
