@@ -16,6 +16,7 @@ import numpy as np
 import skimage.io as io
 import cv2
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 def draw_point(event, x, y, flags, param):
@@ -34,10 +35,10 @@ def draw_point(event, x, y, flags, param):
 if __name__ == '__main__':
     
     # IMAGE FILE NAME YOU WANT TO READ
-    image_path = 'data/'#change your dataset path
+    image_path = '/home/biswajitrana/Documents/2nd_semester/RKMVERI_2ND/class/ML/SS_assignments_2/'#change your dataset path
     img_filename = 'band4.gif'
 
-    img = io.imread(''.join([image_path, img_filename]))
+    img = plt.imread(''.join([image_path, img_filename]))
     print('Input image size: {}' .format(img.shape))
 
     # TO STORE ANNOTATED POINTS
