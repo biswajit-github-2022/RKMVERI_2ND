@@ -14,16 +14,19 @@ class ArrayQueue:
             return True
         return False
     
-    def is_full(self):
-        if  self._size==len(self._data):
-            return True
-        return False
     def first(self):
         if self.is_empty():
             raise Exception ("Queue is empty")
         return self._data[self._front]
+    def last(self):
+        if self.is_empty():
+            raise Exception ("Queue is empty")
+        return self._data[self._front+self._size-1]
     
     def dequeue(self):
+        '''
+        delete_first
+        '''
         if self.is_empty():
             raise Exception ("Queue is empty")
         answer = self._data[self._front]
@@ -31,9 +34,26 @@ class ArrayQueue:
         self._front= (self._front+1) % len(self._data)
         self._size-=1
         return answer
-    
-    def enqueue(self,e):
+    def delete_last(self):
+        if self.is_empty():
+            raise Exception ("Queue is empty")
+        rare=self._front+self._size-1
+        answer=self._data[rare]
+        self._data[rare]= None
+        rare=(rare-1)%len(self._data)
+        self._size-=1
+        return answer
+    def add_first(self,e):
         if self.is_full():
+            self._resize(2*len(self._data))
+        avail= (self._front-1)% len(self._data)
+        self._data[avail]=e
+        self._size+=1
+    def enqueue(self,e):
+        '''
+        add_last
+        '''
+        if self._size==len(self._data):
             self._resize(2*len(self._data))
         avail= (self._front+self._size)% len(self._data)
         self._data[avail]=e
@@ -64,8 +84,10 @@ queue.enqueue(90)
 queue.enqueue(100)
 
 print(queue.first())
+print(queue.last())
 
-# queue.dequeue()
+queue.dequeue()
+queue.delete_last()
 
 print(queue.first())
-print(queue.is_full())
+print(queue.last())
