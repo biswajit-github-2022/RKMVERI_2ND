@@ -1,1 +1,12 @@
-hi
+done in class: 
+    inequalities
+        1.Marcov
+        2.Chebychev
+    Weak Law of large numbers
+    Moment generating functions
+    convergence
+        1.pointwise convergence
+        2.Almost sure convergence
+        3.convergence in probability
+        4.Mean square convergence
+        5.convergence in distribution
