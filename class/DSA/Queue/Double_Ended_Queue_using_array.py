@@ -1,8 +1,8 @@
-class ArrayQueue:
+class DoubleEndedArrayQueue:
     DEFAULT_CAPACITY=10
     
     def __init__(self):
-        self._data=[None]*ArrayQueue.DEFAULT_CAPACITY
+        self._data=[None]*DoubleEndedArrayQueue.DEFAULT_CAPACITY
         self._size=0
         self._front=0
     
@@ -13,7 +13,11 @@ class ArrayQueue:
         if self._size == 0:
             return True
         return False
-    
+    def is_full(self):
+        if  self._size==len(self._data):
+            return True
+        return False
+
     def first(self):
         if self.is_empty():
             raise Exception ("Queue is empty")
@@ -45,7 +49,7 @@ class ArrayQueue:
         return answer
     def add_first(self,e):
         if self.is_full():
-            self._resize(2*len(self._data))
+            self.resize(2*len(self._data))
         avail= (self._front-1)% len(self._data)
         self._data[avail]=e
         self._size+=1
@@ -70,7 +74,7 @@ class ArrayQueue:
     def __str__(self):
         return str(self._data)
 
-queue=ArrayQueue()
+queue=DoubleEndedArrayQueue()
 
 queue.enqueue(10)
 queue.enqueue(20)

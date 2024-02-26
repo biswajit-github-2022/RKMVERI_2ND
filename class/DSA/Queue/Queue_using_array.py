@@ -50,22 +50,22 @@ class ArrayQueue:
     def __str__(self):
         return str(self._data)
 
-queue=ArrayQueue()
+# queue=ArrayQueue()
 
-queue.enqueue(10)
-queue.enqueue(20)
-queue.enqueue(30)
-queue.enqueue(40)
-queue.enqueue(50)
-queue.enqueue(60)
-queue.enqueue(70)
-queue.enqueue(80)
-queue.enqueue(90)
-queue.enqueue(100)
+# queue.enqueue(10)
+# queue.enqueue(20)
+# queue.enqueue(30)
+# queue.enqueue(40)
+# queue.enqueue(50)
+# queue.enqueue(60)
+# queue.enqueue(70)
+# queue.enqueue(80)
+# queue.enqueue(90)
+# queue.enqueue(100)
 
-print(queue.first())
+# print(queue.first())
 
-# queue.dequeue()
+# # queue.dequeue()
 
-print(queue.first())
-print(queue.is_full())
+# print(queue.first())
+# print(queue.is_full())
