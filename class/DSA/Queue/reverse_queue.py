@@ -1,7 +1,7 @@
 from Queue_using_array import ArrayQueue
 
 def reverse(queue:ArrayQueue):
-    if queue.is_empty():
+    if queue.is_empty(): 
         return
     e=queue.dequeue()
     reverse(queue)
