@@ -1,0 +1,2 @@
+run, analyse and understand the code
+write a code to find whether a given number exists in a postional list
