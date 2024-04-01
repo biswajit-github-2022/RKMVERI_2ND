@@ -11,9 +11,9 @@ $HADOOP_HOME/bin/hdfs dfs -cat /mapreduce_output_sales/part-00000
 
 
 sudo addgroup hadoop_
-sudo adduser --ingroup hadoop_ hduser_
-sudo adduser hduser_ sudo
-su - hduser_
+sudo adduser --ingroup hadoop_ hduser
+sudo adduser hduser sudo
+su - hduser
 ssh-keygen -t rsa -P ""
 cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 ssh localhost
@@ -24,7 +24,7 @@ sudo apt-get install openssh-server
 wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
 sudo tar xzf hadoop-3.3.1.tar.gz
 sudo mv hadoop-3.3.1 hadoop
-sudo chown -R hduser_:hadoop_ hadoop
+sudo chown -R hduser:hadoop_ hadoop
 
 
 vi ~/.bashrc 
@@ -53,9 +53,9 @@ vi $HADOOP_HOME/etc/hadoop/core-site.xml
 <description>The name of the default file system. </description>
 </property>
 
-
-sudo chown -R hduser_:Hadoop_ <Path of Directory created in above step>
-sudo chmod 750 <Path of Directory created in above step>
+sudo mkdir -p /app/hadoop/tmp
+sudo chown -R hduser:Hadoop_ /app/hadoop/tmp
+sudo chmod 750 /app/hadoop/tmp
 
 vi $HADOOP_HOME/etc/hadoop/mapred-site.xml
 <property>
@@ -73,14 +73,14 @@ vi $HADOOP_HOME/etc/hadoop/hdfs-site.xml
 </property>
 <property>
 <name>dfs.datanode.data.dir</name>
-<value>/home/hduser_/hdfs</value>
+<value>/home/hduser/hdfs</value>
 </property>
 
 
-sudo mkdir -p /home/hduser_/hdfs
+mkdir /home/hduser/hdfs
 
-sudo chown -R hduser_:hadoop_ /home/hduser_/hdfs
-sudo chmod 750 /home/hduser_/hdfs
+sudo chown -R hduser:hadoop_ /home/hduser/hdfs
+sudo chmod 750 /home/hduser/hdfs
 
 $HADOOP_HOME/bin/hdfs namenode -format
 
@@ -108,7 +108,7 @@ jps
     8  sudo cp /home/sysadm/Downloads/hadoop-3.2.2.tar.gz ./
     9  tar xzvf hadoop-3.2.2.tar.gz hadoop-3.2.2/
    10  mv hadoop-3.2.2 hadoop
-   11  sudo chown -R hduser_:hadoop_ hadoop
+   11  sudo chown -R hduser:hadoop_ hadoop
    ------
    12  readlink -f /usr/bin/java
    13  vi .bashrc
@@ -120,13 +120,13 @@ jps
    19  vi hadoop/etc/hadoop/hadoop-env.sh 
    20  vi $HADOOP_HOME/etc/hadoop/core-site.xml
    21  sudo mkdir -p /app/hadoop/tmp
-   22  sudo chown -R hduser_:hadoop_ /app/hadoop/tmp
+   22  sudo chown -R hduser:hadoop_ /app/hadoop/tmp
    23  sudo chmod 750 /app/hadoop/tmp
    24  vi $HADOOP_HOME/etc/hadoop/mapred-site.xml
    25  vi $HADOOP_HOME/etc/hadoop/hdfs-site.xml
-   26  mkdir -p /home/hduser_/hdfs
-   27  sudo chown -R hduser_:hadoop_ /home/hduser_/hdfs
-   28  sudo chmod 750 /home/hduser_/hdfs
+   26  mkdir -p /home/hduser/hdfs
+   27  sudo chown -R hduser:hadoop_ /home/hduser/hdfs
+   28  sudo chmod 750 /home/hduser/hdfs
    29  $HADOOP_HOME/bin/hdfs namenode -format
    30  $HADOOP_HOME/sbin/start-dfs.sh
    31  $HADOOP_HOME/sbin/start-yarn.sh

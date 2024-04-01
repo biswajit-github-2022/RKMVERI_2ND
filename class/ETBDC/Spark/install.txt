@@ -1,0 +1,3 @@
+download spark from apache spark
+rename it to spark 
+move it to /opt/
