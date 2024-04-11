@@ -166,7 +166,7 @@ class Tree:
     def count_nodes(self):
         def count(node):
             if node is None:
-                return 0
+                return 0 
             total = 1
             for child in node.children:
                 total += count(child)
@@ -194,3 +194,8 @@ tree._print_node(tree.root, 0)
 print(tree.count_nodes())
 print(tree.breadth_first_traversal())
 print(tree.post_order_traversal())
+print(tree.pre_order_traversal())
+print(tree.height_of_tree())
+print(tree.depth_of_node("A"))
+
+print(tree.find_node_by_value(root,"x").value)
