@@ -27,7 +27,9 @@ class Tree:
         
         if parent_node is None:
             raise ValueError("Parent node is invalid")
-        parent_node.children.extend(children)        
+        parent_node.children.extend(children) 
+        for i in children:
+            i.parent=parent_node       
 
     
     def find_node_by_value(self, node, value):
@@ -47,7 +49,9 @@ class Tree:
     def depth(self, node):
         if node is None:
             return 0
-        return 1 + self.depth(node.parent)
+        if node.parent is None:
+            return 0
+        return 1+ self.depth(node.parent)
 
     def height(self, node):
         if node is None:
@@ -166,7 +170,7 @@ class Tree:
     def count_nodes(self):
         def count(node):
             if node is None:
-                return 0
+                return 0 
             total = 1
             for child in node.children:
                 total += count(child)
@@ -184,7 +188,10 @@ d = tree.add_child(b, "D")
 e = tree.add_child(b, "E")
 f = tree.add_child(c, "F")
 g = tree.add_child(c, "G")
-tree.add_children(g,[Node('x'), Node('y'), Node('z')]) 
+x=Node("x")
+y=Node("y")
+z=Node("z")
+tree.add_children(g,[x, y, z]) 
 
 
 
@@ -194,3 +201,10 @@ tree._print_node(tree.root, 0)
 print(tree.count_nodes())
 print(tree.breadth_first_traversal())
 print(tree.post_order_traversal())
+print(tree.pre_order_traversal())
+print(tree.height_of_tree())
+print(tree.depth_of_node("A"))
+
+print(tree.find_node_by_value(root,"x").value)
+
+print(tree.depth(Node("x")))
