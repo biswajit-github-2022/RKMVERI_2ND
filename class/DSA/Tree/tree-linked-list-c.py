@@ -121,4 +121,6 @@ tree.add_children(g,[Node('x'), Node('y'), Node('z')])
 
 tree._print_node(tree.root, 0)
 
+print(tree.depth(b))
+
 
