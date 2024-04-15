@@ -121,6 +121,9 @@ tree.add_children(g,[Node('x'), Node('y'), Node('z')])
 
 tree._print_node(tree.root, 0)
 
-print(tree.depth(b))
+print(tree.is_empty())
+print(tree.depth(root))
+print(tree.height(root))
+print(tree.is_leaf(Node('x')))
 
 

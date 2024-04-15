@@ -49,8 +49,8 @@ class Tree:
     def depth(self, node):
         if node is None:
             return 0
-        if node.parent is None:
-            return 0
+        # if node.parent is None:
+        #     return 0
         return 1+ self.depth(node.parent)
 
     def height(self, node):
@@ -76,47 +76,41 @@ class Tree:
             self._print_node(child, level + 1)
 
      
-     #-------------------------------------------------------------------------------------------------               
+#//////////////////////////////////////////////////////////////////////////////////////////      
           
     def remove_node(self, value):
+        "Removes a node from the tree and returns the `value`"
         node_to_remove = self.find_node_by_value(self.root, value)
         if node_to_remove is None:
-            print("Node with value '{}' not found in the tree".format(value))
-            return
-
+            raise Exception(f"Node with value '{value}' not found in the tree")
         parent = node_to_remove.parent
-        if parent is None:  # Node to remove is the root
+        if parent is None: 
             self.clear_tree()
-            return
-
+            return "Node (root) is removed"
         parent.children.remove(node_to_remove)
         node_to_remove.parent = None
-        print("Node with value '{}' removed from the tree".format(value))
+        return value
 
     def find_immediate_common_ancestor(self, value1, value2):
+        "Returns `node1 & node2 , ancestor`"
         node1 = self.find_node_by_value(self.root, value1)
         node2 = self.find_node_by_value(self.root, value2)
         if node1 is None or node2 is None:
-            print("One or both of the nodes not found in the tree")
-            return None
-
+            raise Exception(f"One or both nodes are not found in the tree")
         ancestors1 = set()
         while node1 is not None:
             ancestors1.add(node1)
             node1 = node1.parent
-
         while node2 is not None:
             if node2 in ancestors1:
-                return node2
+                return value1+" & "+value2, node2.value
             node2 = node2.parent
         return None
 
     def path_to_node(self, value):
         node = self.find_node_by_value(self.root, value)
         if node is None:
-            print("Node with value '{}' not found in the tree".format(value))
-            return []
-
+            raise Exception(f"Node with value '{value}' not found in the tree")
         path = []
         while node is not None:
             path.append(node.value)
@@ -124,11 +118,11 @@ class Tree:
         return path[::-1]
 
     def depth_of_node(self, value):
+        "Returns `Value , Depth` of the node"
         node = self.find_node_by_value(self.root, value)
         if node is None:
-            print("Node with value '{}' not found in the tree".format(value))
-            return -1  # Indicates node not found
-        return self.depth(node)
+            raise Exception(f"Node with value '{value}' not found in the tree")
+        return value,self.depth(node)
 
     def height_of_tree(self):
         if self.is_empty():
@@ -136,38 +130,49 @@ class Tree:
         return self.height(self.root)
 
     def pre_order_traversal(self):
+        "Returns the `Pre order traversal` "
+        traversal_result = []
         def traverse(node):
             if node is None:
                 return
-            print(node.value, end=" ")
+            if node.value is not None:
+                traversal_result.append(node.value)
             for child in node.children:
                 traverse(child)
-
         traverse(self.root)
-        print()
+        return ' '.join(traversal_result)
+
 
     def post_order_traversal(self):
+        "Returns the `Post order traversal` "
+        traversal_result = []
         def traverse(node):
             if node is None:
                 return
             for child in node.children:
                 traverse(child)
-            print(node.value, end=" ")
-
+            if node.value is not None:
+                traversal_result.append(node.value)
         traverse(self.root)
-        print()
+        return ' '.join(traversal_result)
+
+
 
     def breadth_first_traversal(self):
+        "Returns a generator that yields the values in the tree in breadth-first order"
         if self.is_empty():
             return ""
         queue = [self.root]
         while queue:
             node = queue.pop(0)
-            print(node.value, end=" ")
-            queue.extend(node.children)
-        print()
+            if node.value is not None:
+                yield node.value
+            for child in node.children:
+                if child.value is not None:
+                    queue.append(child)
 
     def count_nodes(self):
+        "Returns the `number of nodes` in the tree"
         def count(node):
             if node is None:
                 return 0 
@@ -198,13 +203,35 @@ tree.add_children(g,[x, y, z])
 
 
 tree._print_node(tree.root, 0)
+
+#//////////////////////////////////////////////////////////////////////////////
+print("Node Count:")
 print(tree.count_nodes())
-print(tree.breadth_first_traversal())
+print()
+print("Breath First traversal:")
+for node in tree.breadth_first_traversal():
+    print(node, end=" ")
+print()
+print()
+print("Post Order Traversal:")
 print(tree.post_order_traversal())
+print()
+print("Pre Order Traversal:")
 print(tree.pre_order_traversal())
+print()
+print("Height of tree:")
 print(tree.height_of_tree())
-print(tree.depth_of_node("A"))
-
-print(tree.find_node_by_value(root,"x").value)
-
-print(tree.depth(Node("x")))
+print()
+print("Depth of given node:")
+print(tree.depth_of_node("x"))
+print()
+print("Path of a node from root:")
+print(tree.path_to_node('x'))
+print()
+print("Immidiate ancestor of two nodes:")
+print(tree.find_immediate_common_ancestor('D',"E"))
+print()
+print("Removal of Node:")
+print(tree.remove_node("x"))
+print()
+#////////////////////////////////////////////////////////////////////////////
