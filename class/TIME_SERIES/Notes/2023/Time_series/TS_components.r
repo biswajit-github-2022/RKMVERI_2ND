@@ -6,8 +6,7 @@
 # Red wine data
 # -----------------------------------------------------------------------
 library(itsmr)
-winets=ts(wine,start=c(1980,1),end=c(1991,10),
-          frequency=12)         # transform to time series object
+winets=ts(wine,start=c(1980,1),end=c(1991,10),frequency=12)         # transform to time series object
 par(mfrow=c(1,2))
 plot.ts(winets,type='o')        # data before transformation
 plot.ts(log(winets),type='o')   # data after log transformation
