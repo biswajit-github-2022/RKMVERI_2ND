@@ -1,0 +1,20 @@
+Resampling Techniques:
+SMOTE (Synthetic Minority Over-sampling Technique): Generates synthetic samples for the minority class to balance the dataset.
+Random Oversampling: Randomly duplicates instances of the minority class to balance the dataset.
+Random Undersampling: Randomly removes instances from the majority class to balance the dataset.
+SMOTE-ENN and SMOTE-Tomek: Hybrid methods combining SMOTE with undersampling techniques to balance the dataset.
+Algorithmic Techniques:
+Cost-sensitive Learning: Modifies the cost function to penalize misclassifications of the minority class more heavily.
+Class Weighting: Adjusts the weights of classes in the algorithm to account for class imbalance.
+Ensemble Methods: Uses ensemble techniques such as BalancedRandomForestClassifier, EasyEnsembleClassifier, or BalancedBaggingClassifier to train multiple models and combine their predictions.
+Algorithm-specific Techniques:
+SVM with Class Weights: Applies class weights or adjusts the penalty parameter to handle class imbalance in Support Vector Machines.
+Decision Trees and Random Forests with Class Weights: Modifies decision thresholds or uses class weights to handle class imbalance.
+Neural Networks with Class Weights or Focal Loss: Adjusts class weights, uses focal loss, or designs specialized architectures to handle class imbalance.
+Evaluation Metrics:
+F1-score: Harmonic mean of precision and recall, useful for imbalanced datasets.
+Precision, Recall: Evaluates the ability of the model to correctly classify positive instances and capture all positive instances, respectively.
+Area under the ROC curve (AUC-ROC): Measures the ability of the model to distinguish between positive and negative classes across different thresholds.
+Data Preprocessing Techniques:
+Feature Engineering: Creates new features that better represent the underlying data distribution.
+Anomaly Detection: Identifies and removes outliers that may negatively impact model performance.
