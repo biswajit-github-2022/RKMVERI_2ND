@@ -146,3 +146,20 @@ ar2pacf=pacf(ar2,ylim = c(-1,1), main="AR(2) pacf")   # PACF of AR(2)
 arma_1_1pacf=pacf(arma_1_1,ylim = c(-1,1), main="ARMA(1,1) pacf") # PACF of ARMA(1,1)
 #########################################################################
 sppacf=pacf(sunspot.year[70:169])
+
+
+
+
+# CLEAN UP #################################################
+
+# Clear environment
+rm(list = ls()) 
+
+# Clear packages
+p_unload(all)  # Remove all add-ons
+
+# Clear console
+cat("\014")  # ctrl+L
+
+# Clear mind :)
+s

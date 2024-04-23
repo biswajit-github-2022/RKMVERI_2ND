@@ -86,3 +86,19 @@ plot.ts(trFit$residuals)
 acf2(trFit$residuals)
 huron.res.at=autofit(trFit$residuals,p=0:5,q=0:5);print(huron.res.at) # Autofit by mle
 # --------------------------------------
+
+
+
+
+# CLEAN UP #################################################
+
+# Clear environment
+rm(list = ls()) 
+
+# Clear packages
+p_unload(all)  # Remove all add-ons
+
+# Clear console
+cat("\014")  # ctrl+L
+
+# Clear mind :)

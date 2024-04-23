@@ -63,3 +63,18 @@ ts.plot(ts(dowj),
         col=c('black','blue'),xlim=c(0,length(dowj)+100),
         ylab="Index Value",main="Dow Jones Utility Index")
 # --------------------------------------
+
+
+
+# CLEAN UP #################################################
+
+# Clear environment
+rm(list = ls()) 
+
+# Clear packages
+p_unload(all)  # Remove all add-ons
+
+# Clear console
+cat("\014")  # ctrl+L
+
+# Clear mind :)

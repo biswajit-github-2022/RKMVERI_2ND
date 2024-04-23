@@ -178,3 +178,19 @@ D1acdDatats_df_ds=ts(acdDatats_df_ds[2:length(acdDatats_df_ds)]-
                      start(acdDatats_df_ds)+c(0,1),end(acdDatats_df_ds),12) # 1st difference
 plot.ts(D1acdDatats_df_ds,type="o",ylab="D1(Del_12(acdDatats))");abline(0,0)
 #########################################################################
+
+
+
+# CLEAN UP #################################################
+
+# Clear environment
+rm(list = ls()) 
+
+# Clear packages
+p_unload(all)  # Remove all add-ons
+
+# Clear console
+cat("\014")  # ctrl+L
+
+# Clear mind :)
+

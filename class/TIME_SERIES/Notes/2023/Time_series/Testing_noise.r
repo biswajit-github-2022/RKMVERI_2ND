@@ -44,7 +44,7 @@ turning.point.test(xt)
 qqnorm(xt)
 # Shapiro Francia (checking of normality)
 library(nortest)
-sf.test(xt)
+# sf.test(xt)
 # Shapiro Wilk (checking of normality)
 # shapiro.test(xt)
 # # checking of normality
@@ -80,3 +80,18 @@ shapiro.test(xt)
 # # checking of normality
 # ks.test(xt, "pnorm")                                  
 #########################################################################
+
+
+# CLEAN UP #################################################
+
+# Clear environment
+rm(list = ls()) 
+
+# Clear packages
+p_unload(all)  # Remove all add-ons
+
+# Clear console
+cat("\014")  # ctrl+L
+
+# Clear mind :)
+
