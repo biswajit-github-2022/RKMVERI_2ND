@@ -115,7 +115,8 @@ plot.ts(D2myts_ln,type="o",ylab="Log Population in Millions 2nd diff")
 # -----------------------------------------------------------------------
 # Seasonality (US monthly accidental data)
 # -----------------------------------------------------------------------
-acdData <- read.csv("accidental-deaths-in-usa-monthly.csv",
+data_path="D:/MSC/2nd_sem/class/TIME_SERIES/Notes/2023/Time_series/accidental-deaths-in-usa-monthly.csv"
+acdData <- read.csv(data_path,
                     header = TRUE)
 acdDatats=ts(acdData[,2]/1000,start=c(1973,1),end=c(1978,12),
              frequency=12)
@@ -135,7 +136,7 @@ plot(as.numeric(time(acdDatats)),reg2$residuals,
 # -----------------------------------------------------------------------
 # Trend and Seasonality (US monthly accidental data)
 # -----------------------------------------------------------------------
-acdData <- read.csv("accidental-deaths-in-usa-monthly.csv",
+acdData <- read.csv(data_path,
                     header = TRUE)
 acdDatats=ts(acdData[,2]/1000,start=c(1973,1),end=c(1978,12),
              frequency=12)
@@ -188,6 +189,9 @@ rm(list = ls())
 
 # Clear packages
 p_unload(all)  # Remove all add-ons
+
+# Clear plots
+dev.off()  # But only if there IS a pl
 
 # Clear console
 cat("\014")  # ctrl+L
