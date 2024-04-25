@@ -7,7 +7,8 @@ library(fitdistrplus)
 #=========================================================================
 # Step 0. Get the data
 #-------------------------------------------------------------------------
-myCredit=read.csv('GermanCredit.csv')   # Extract the German Credit Data
+path="D:/MSC/2nd_sem/class/TIME_SERIES/Notes/2023/Survival/GermanCredit.csv"
+myCredit=read.csv(path)   # Extract the German Credit Data
 head(myCredit)        # Have a glimpse of data
 names(myCredit)       # the column names of the data
 str(myCredit)         # types of variables
@@ -64,3 +65,20 @@ summary(ResultLL)
 ResultLL = survreg(SurvObject ~ Amount + InstallmentRatePercentage, data=myCredit, dist="loglogistic")
 summary(ResultLL)
 #=========================================================================
+
+# CLEAN UP #################################################
+
+# Clear environment
+rm(list = ls()) 
+
+# Clear packages
+p_unload(all)  # Remove all add-ons
+
+# Clear plots
+dev.off()  # But only if there IS a pl
+
+# Clear console
+cat("\014")  # ctrl+L
+
+# Clear mind :)
+

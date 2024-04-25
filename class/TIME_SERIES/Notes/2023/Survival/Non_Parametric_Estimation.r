@@ -7,7 +7,8 @@ library(fitdistrplus)
 #=========================================================================
 # Step 0. Get the data
 #-------------------------------------------------------------------------
-myCredit=read.csv('GermanCredit.csv')   # Extract the German Credit Data
+path="D:/MSC/2nd_sem/class/TIME_SERIES/Notes/2023/Survival/GermanCredit.csv"
+myCredit=read.csv(path)    # Extract the German Credit Data
 head(myCredit)        # Have a glimps of data
 names(myCredit)       # the column names of the data
 str(myCredit)         # types of variables
@@ -57,3 +58,22 @@ mhFit=muhaz(Lifetime,Status,kern="epanechnikov")
 plot(mhFit$est.grid,mhFit$haz.est,type="l",xlab="time",ylab="Hazard rate")
 title("Figure 5D")
 #-------------------------------------------------------------------------
+
+#=========================================================================
+
+# CLEAN UP #################################################
+
+# Clear environment
+rm(list = ls()) 
+
+# Clear packages
+p_unload(all)  # Remove all add-ons
+
+# Clear plots
+dev.off()  # But only if there IS a pl
+
+# Clear console
+cat("\014")  # ctrl+L
+
+# Clear mind :)
+

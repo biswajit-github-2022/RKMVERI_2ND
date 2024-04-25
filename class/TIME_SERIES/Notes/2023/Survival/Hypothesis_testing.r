@@ -7,7 +7,8 @@ library(MASS)
 #=========================================================================
 # Step 0. Get the data
 #-------------------------------------------------------------------------
-myCredit=read.csv('GermanCredit.csv')   # Extract the German Credit Data
+path="D:/MSC/2nd_sem/class/TIME_SERIES/Notes/2023/Survival/GermanCredit.csv"
+myCredit=read.csv(path)   # Extract the German Credit Data
 head(myCredit)        # Have a glimps of data
 #=========================================================================
 # Step 1. Preparing Right Censor Data
