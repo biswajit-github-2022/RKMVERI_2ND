@@ -19,11 +19,6 @@ def quick_sort(arr, low=0, high=None):
     quick_sort(arr, pivot_index + 1, high)  # Sort right sub-array
 
   return arr
-
-
-
-
-
 def partition(arr, p, high):
  
   pivot = arr[high]  # Now the pivot is the last element
@@ -39,6 +34,18 @@ def partition(arr, p, high):
   return i + 1
 
 
+def bucket_sort(arr):
+    buckets = [[] for _ in range(len(arr))]
+    for num in arr:
+        index = int(num * len(arr))
+        buckets[index].append(num)
+    
+    for bucket in buckets:
+        bucket.sort()
+    
+    sorted_arr = [num for bucket in buckets for num in bucket]
+    
+    return sorted_arr
 
 def shell_sort(arr):
 
@@ -56,7 +63,7 @@ def shell_sort(arr):
         j -= h
       arr[j + h] = current
       
-    print(arr)  
+    # print(arr)  
     h //= 3  # Reduce the increment size for the next iteration
 
 
@@ -107,6 +114,37 @@ def selection_sort(arr):
   return arr
 
 
+
+def counting_sort(arr, exp):
+    n = len(arr)
+    output = [0] * n
+    count = [0] * 10
+    
+    for i in range(n):
+        index = arr[i] // exp
+        count[index % 10] += 1
+    
+    for i in range(1, 10):
+        count[i] += count[i - 1]
+    
+    i = n - 1
+    while i >= 0:
+        index = arr[i] // exp
+        output[count[index % 10] - 1] = arr[i]
+        count[index % 10] -= 1
+        i -= 1
+    
+    for i in range(n):
+        arr[i] = output[i]
+
+def radix_sort(arr):
+    max_num = max(arr)
+    exp = 1
+    while max_num // exp > 0:
+        counting_sort(arr, exp)
+        exp *= 10
+
+
 # Example usage
 # arr = [18, 72, 23, 41, 13, 9, 6, 1, 5, 11]
 arr = [1, 5, 6, 9, 11, 13, 18, 23, 41, 72]
@@ -124,5 +162,14 @@ print("Selection Sort:", sorted_arr)
 sorted_arr = quick_sort(arr.copy())
 print("Quick Sort:", sorted_arr)
 
+arr=[72, 50, 48, 41,33, 23, 20, 19, 18,16, 14, 13, 11, 9, 6, 5, 1]
 sorted_arr = shell_sort(arr.copy())
 print("Shell Sort:", sorted_arr)
+
+arr = [0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434]
+sorted_arr = bucket_sort(arr)
+print("Bucket Sort:", sorted_arr)
+
+arr = [170, 45, 75, 90, 802, 24, 2, 66]
+sorted_arr =radix_sort(arr)
+print("Radix Sort:", sorted_arr)
