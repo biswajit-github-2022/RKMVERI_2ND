@@ -95,14 +95,14 @@ def detect_and_track_objects(frame, backSub):
     return frame
 
 # Initialize video capture object
-cap = cv2.VideoCapture('/home/biswajitrana/Videos/Untitled.mp4')  # Replace 'your_video.mp4' with the path to your video file
+cap = cv2.VideoCapture('D:\\biswajit.mp4')  # Replace 'your_video.mp4' with the path to your video file
 
 # Get video frame width and height
 frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
 
 # Create VideoWriter object to save the output video
-out = cv2.VideoWriter('output_video1.mp4', cv2.VideoWriter_fourcc(*'mp4v'), 30, (frame_width, frame_height))
+out = cv2.VideoWriter('D:\\output_video100.mp4', cv2.VideoWriter_fourcc(*'mp4v'), 30, (frame_width, frame_height))
 
 # Create background subtractor object
 backSub = cv2.createBackgroundSubtractorMOG2()
