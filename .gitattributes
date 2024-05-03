@@ -1,3 +1,0 @@
-D:/MSC/2nd_sem/class/ML/ML_project/work/Result_images/*.jpg filter=lfs diff=lfs merge=lfs -text
-D:/MSC/2nd_sem/class/ML/ML_project/work/Result_images/*.PNG filter=lfs diff=lfs merge=lfs -text
-D:/MSC/2nd_sem/class/ML/ML_project/work/REPORT/*.pdf filter=lfs diff=lfs merge=lfs -text
