@@ -1,0 +1,105 @@
+Programme,Category,Male,Female,Others,Total
+MSc in Computer Science,GENERAL,5,0,0,5
+,GENERAL-EWS,1,0,0,1
+MSc in Physics,GENERAL,19,7,0,26
+,OBC,1,1,0,2
+,SC,3,0,0,3
+MA / MSc in Yoga,GENERAL,2,0,0,2
+,SC,2,0,0,2
+,ST,1,0,0,1
+Integrated 5 Year MA in Sanskrit(M),GENERAL,9,0,0,9
+,OBC,2,0,0,2
+,SC,6,0,0,6
+MSc in Big Data Analytics,GENERAL,11,0,0,11
+,GENERAL-EWS,2,0,0,2
+,SC,1,0,0,1
+MSc in Mathematics,GENERAL,14,0,0,14
+,GENERAL-EWS,2,0,0,2
+,OBC,5,0,0,5
+,SC,1,0,0,1
+Integrated MPhil-PhD in Sanskrit,GENERAL,2,0,0,2
+,OBC,5,0,0,5
+,SC,1,0,0,1
+PhD in Yoga,OBC,1,0,0,1
+,SC,1,0,0,1
+PhD in Physics,GENERAL,1,0,0,1
+PG Diploma in Yoga,GENERAL,2,0,0,2
+,OBC,1,0,0,1
+Certificate Course in Yoga,GENERAL,7,0,0,7
+,SC,1,0,0,1
+Certificate Course in Communicative Sanskrit - Preliminary,GENERAL,4,12,0,16
+,GENERAL-EWS,1,1,0,2
+,OBC,0,1,0,1
+,SC,2,2,0,4
+Certificate Course in Communicative Sanskrit - Intermediate,GENERAL,5,14,0,19
+,OBC,0,2,0,2
+,SC,1,1,0,2
+,ST,0,1,0,1
+Diploma in Organic Farming,OBC,2,1,0,3
+,SC,0,1,0,1
+,ST,1,1,0,2
+"5 yr Intd. MSc in Agriculture, Rural & Tribal Development",GENERAL,12,7,0,19
+,OBC,5,4,0,9
+,SC,3,0,0,3
+,ST,3,5,0,8
+MA/MSc in Rural Development & Management,GENERAL,4,3,0,7
+,OBC,5,5,0,10
+,SC,1,0,0,1
+,ST,1,0,0,1
+"MSc in Agriculture, Rural & Tribal Development",GENERAL,3,2,0,5
+,OBC,2,2,0,4
+,SC,1,0,0,1
+"PhD in Agriculture, Rural & Tribal Development",GENERAL,1,0,0,1
+,OBC,2,0,0,2
+Bachelor of Physical Education (BPED),GENERAL,3,0,0,3
+,OBC,26,0,0,26
+,SC,8,0,0,8
+"BSc in Physical Education, Health Education and Sports",GENERAL,1,0,0,1
+,OBC,43,0,0,43
+,SC,7,0,0,7
+,ST,1,0,0,1
+BSc (Agriculture),OBC,43,0,0,43
+,SC,6,0,0,6
+B.Ed in Special Education(VI),OBC,0,2,0,2
+B.Ed in Special Education (HI),GENERAL,0,1,0,1
+,OBC,0,2,0,2
+,SC,0,1,0,1
+B.Ed in Special Education(ID),OBC,0,11,0,11
+M.Ed Special Education (ID),OBC,0,1,0,1
+Master of Physical Education(MPED),GENERAL,2,0,0,2
+,OBC,14,0,0,14
+,SC,3,0,0,3
+MSc in Data Science,OBC,7,0,0,7
+,SC,1,0,0,1
+Intd. MSc in Computer Science Applications,OBC,9,0,0,9
+M.Ed in Special Education(VI),OBC,0,2,0,2
+,ST,1,2,0,3
+M.Ed in Special Education(HI),GENERAL,0,1,0,1
+,OBC,1,0,0,1
+Intd B.Ed-M.Ed Special Education(ID),GENERAL,1,2,0,3
+,OBC,2,2,0,4
+,SC,0,1,0,1
+MSc in Agricultural Biotechnology,GENERAL,7,4,0,11
+,GENERAL-EWS,1,0,0,1
+,OBC,0,1,0,1
+MSc in Agriculture and Rural Development,GENERAL,8,7,0,15
+,OBC,1,0,0,1
+,SC,6,1,0,7
+,ST,0,1,0,1
+MSc in Environment and Disaster Management,GENERAL,2,4,0,6
+,GENERAL-EWS,1,0,0,1
+,OBC,1,1,0,2
+,SC,0,1,0,1
+MSc (Ag.) in Genetics & Plant Breeding,GENERAL,6,2,0,8
+,OBC,1,0,0,1
+,SC,2,0,0,2
+MSc in Medical Biotechnology,GENERAL,5,3,0,8
+,OBC,1,2,0,3
+,SC,0,2,0,2
+PhD in Environment & Disaster Management,GENERAL,1,0,0,1
+PhD in Medical Biotechnology,GENERAL,1,0,0,1
+PG Diploma in Post Harvest & Food Technology,GENERAL,10,7,0,17
+,GENERAL-EWS,1,0,0,1
+,OBC,0,1,0,1
+,SC,1,0,0,1
+Total,,403,138,0,541

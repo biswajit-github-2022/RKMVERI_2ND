@@ -1,0 +1,24 @@
+package SalesCountry;
+
+import java.io.IOException;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapred.*;
+
+public class SalesMapper extends MapReduceBase implements Mapper<LongWritable, Text, Text, IntWritable> {
+    private final static IntWritable one = new IntWritable(1);
+
+    public void map(LongWritable key, Text value, OutputCollector<Text, IntWritable> output, Reporter reporter) throws IOException {
+
+        String valueString = value.toString();
+        String[] SingleCountryData = valueString.split(",");
+
+        // Get the designation which is the last column
+        String designation = SingleCountryData[SingleCountryData.length - 1].trim();
+        
+        // Emit key-value pair where key is the designation and value is one
+        output.collect(new Text(designation), one);
+    }
+}
+

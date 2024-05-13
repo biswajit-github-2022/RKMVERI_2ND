@@ -1,0 +1,47 @@
+pyspark --packages graphframes:graphframes:0.8.0-spark2.4-s_2.11
+pyspark --packages graphframes:graphframes:0.8.2-spark3.2-s_2.12
+
+Key point
+
+result = sub2.find("(a)-[ab]->(b); (b)-[bc]->(c); !(a)-[]->(c)").filter("a.id = 'JFK'").filter("c.id = 'EWR'")
+
+https://graphframes.github.io/graphframes/docs/_site/quick-start.html
+
+
+
+
+-------------------------------------
+GraphFrame
+
+import pyspark.sql.functions as F
+sub = GraphFrame(g.vertices, distance)
+r = sub.find("(a)-[ab]->(b); (b)-[bc]->(c); !(a)-[]->(c)").filter('c.id != a.id')
+r2 = r.withColumn("sum_distance", r.ab.DISTANCE + r.bc.DISTANCE).groupby('a.id','c.id').max('sum_distance').sort(desc('max(sum_distance)')).show()
+r.count()
+
+
+
+
+
+
+
+LOAD CSV WITH HEADERS FROM 'file:///Jan_2019_ontime.csv' AS row
+MERGE (e:airport {id: row.ORIGIN, AIRPORT_ID: row.ORIGIN_AIRPORT_ID})
+MERGE (s:airport {id: row.DEST, AIRPORT_ID: row.DEST_AIRPORT_ID})
+MERGE (e)-[r:CAN_CONNECT{src: row.ORIGIN, dst: row.DEST, distance: row.DISTANCE}]->(s)
+
+
+match (ap:airport)-[:CAN_CONNECT{src:ap.id}]-(test)-[:CAN_CONNECT{src:test.id}]-(ap2:airport)
+where (ap.id <> ap2.id) 
+match (ap:airport)-[:CAN_CONNECT{src:ap.id}]-(test)-[:CAN_CONNECT{src:test.id}]-(ap2:airport)
+where not (ap:airport)-[:CAN_CONNECT{src:ap.id}]-(ap2)
+return ap.id,test.id, ap2.id
+order by ap2.id ;
+
+222753 records
+
+
+match (ap:airport)-[r:CAN_CONNECT{src:ap.id}]-(test)
+where toFloat(r.distance) > 500
+return r
+order by r.distance ;

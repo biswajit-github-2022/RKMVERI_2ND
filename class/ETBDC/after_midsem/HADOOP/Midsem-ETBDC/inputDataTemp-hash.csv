@@ -1,0 +1,16 @@
+Date,City,Country,Morning Temp, Afternoon Temp, Evening Temp
+1/2/09,City1,IN,30,32,20
+1/2/09,City2,IN,20,22,20
+1/2/09,City3,IN,50,52,50
+1/2/09,City4,IN,##,42,40
+1/2/09,City5,IN,10,##,20
+1/2/09,City6,IN,30,32,##
+1/2/09,City7,IN,30,32,20
+1/2/09,,,30,32,20
+1/2/09,City8,IN,30,32,20
+1/2/09,City9,IN,30,32,20
+1/2/09,City1,IN,30,37,20
+1/2/09,City1,IN,30,36,20
+1/2/09,City4,IN,44,46,40
+1/2/09,,IN,30,36,20
+1/2/09,City1,IN,30,36,20

@@ -1,0 +1,37 @@
+Department,Programme,Category,Total,total_new
+SANS,Integrated 5 Year MA in Sanskrit(M),SC,6,6
+SANS,Integrated 5 Year MA in Sanskrit(M),OBC,2,2
+SANS,Integrated 5 Year MA in Sanskrit(M),GENERAL,9,9
+PHYS,MSc in Physics,SC,3,3
+PHYS,MSc in Physics,OBC,2,2
+PHYS,MSc in Physics,GENERAL,26,26
+COMPSC,MSc in Big Data Analytics,SC,1,1
+COMPSC,MSc in Big Data Analytics,GENERAL-EWS,2,2
+COMPSC,MSc in Big Data Analytics,GENERAL,11,11
+COMPSC,MSc in Computer Science,GENERAL-EWS,1,1
+COMPSC,MSc in Computer Science,GENERAL,5,5
+SANS,Integrated MPhil-PhD in Sanskrit,SC,1,1
+SANS,Integrated MPhil-PhD in Sanskrit,OBC,5,5
+SANS,Integrated MPhil-PhD in Sanskrit,GENERAL,2,2
+SSYOGA,PG Diploma in Yoga,OBC,1,1
+SSYOGA,PG Diploma in Yoga,GENERAL,2,2
+SSYOGA,PhD in Yoga,SC,1,1
+SSYOGA,PhD in Yoga,OBC,1,1
+SSYOGA,MA / MSc in Yoga,ST,1,1
+SSYOGA,MA / MSc in Yoga,SC,2,2
+SSYOGA,MA / MSc in Yoga,GENERAL,2,2
+MATHS,MSc in Mathematics,SC,1,1
+MATHS,MSc in Mathematics,OBC,5,5
+MATHS,MSc in Mathematics,GENERAL-EWS,2,2
+MATHS,MSc in Mathematics,GENERAL,14,14
+PHYS,PhD in Physics,GENERAL,1,1
+SSYOGA,Certificate Course in Yoga,SC,1,1
+SSYOGA,Certificate Course in Yoga,GENERAL,7,7
+SANS,Certificate Course in Communicative Sanskrit - Preliminary,SC,4,4
+SANS,Certificate Course in Communicative Sanskrit - Preliminary,OBC,1,1
+SANS,Certificate Course in Communicative Sanskrit - Preliminary,GENERAL-EWS,2,2
+SANS,Certificate Course in Communicative Sanskrit - Preliminary,GENERAL,16,16
+SANS,Certificate Course in Communicative Sanskrit - Intermediate,ST,1,1
+SANS,Certificate Course in Communicative Sanskrit - Intermediate,SC,2,2
+SANS,Certificate Course in Communicative Sanskrit - Intermediate,OBC,2,2
+SANS,Certificate Course in Communicative Sanskrit - Intermediate,GENERAL,19,19

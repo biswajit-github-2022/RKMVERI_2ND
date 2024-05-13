@@ -1,0 +1,12 @@
+mvn clean install -Dhttps.protocols=TLSv1.2
+
+hadoop fs -mkdir /dcache1
+hadoop fs -mkdir /dcache1/input
+hadoop fs -copyFromLocal input/lyrics.txt /dcache1/input/
+hadoop fs -copyFromLocal input/stopWords.txt /dcache1/input/
+
+hadoop fs -rm -r /dcache1/output
+
+hadoop jar target/dcache.jar /dcache1/input/lyrics.txt /dcache1/output
+
+hadoop fs -cat /dcache1/output/part-r-00000

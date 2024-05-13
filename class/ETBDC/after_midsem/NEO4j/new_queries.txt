@@ -1,0 +1,16 @@
+
+####Question: No. of paths between IAH and EWR with one destination in between
+##Neo4j
+MATCH (ap:airport {id: "IAH"})-[:CAN_CONNECT{src:ap.id}]-(test)-[:CAN_CONNECT{src:test.id}]-(ap2:airport {id: "EWR"})
+RETURN ap, ap2, test
+##Graphframe
+jfk_vertex = g.vertices.filter("id = 'IAH'")
+ord_vertex = g.vertices.filter("id = 'EWR'")
+
+# Perform the triple pattern match
+result = g.find("(ap)-[e1]->(test); (test)-[e2]->(ap2)") \
+          .filter("ap.id = 'IAH' AND ap2.id = 'EWR' AND ap.id != ap2.id") \
+          .select("ap", "ap2")
+
+result.show()
+
