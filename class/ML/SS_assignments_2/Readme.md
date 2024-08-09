@@ -12,3 +12,10 @@
 # Result
 
 - You will get a segmentation image of River and non river portions, Done by classification algorithm Naive Bayes.
+
+
+Sample input Image
+![](band4.gif)
+
+Segregated Output Image
+![](output_image.png) 
