@@ -1,0 +1,48 @@
+#To Create you Own Dataset
+
+1.
+
+https://apify.com/
+
+Sign up
+
+2. 
+
+Go to Store
+
+Search for "Twitter"
+
+Under "All pricing models" select "Pay per result"
+
+Select "Tweet Scraper V2 (Pay Per Result) - X / Twitter Scraper"
+
+3.
+
+Clear "Start URLs".
+Clear "Search Terms".
+
+Under "Twitter handles" : 1. Clear all
+			  2. Put your desired twitter handle. (Eg: for Elon Musk, put 'elonmusk')
+			  
+Clear "Conversation IDs".
+
+Under Maximum number of items on output : put 20
+Under Max tweets per query : put 20
+
+Clear everything under "Query Wizard".
+
+DO NOT TOUCH "Advanced Options". (No idea what that is)
+
+Press Start
+
+4.
+
+Click Export (Bottom Left)
+Select Format as CSV
+Under Selected Fields select "text" only.
+
+Press Download
+
+#Requires Data Cleaning#
+
+Remember t0 change this file path in my_spark_app.py
